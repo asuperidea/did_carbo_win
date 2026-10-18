@@ -11,7 +11,7 @@ async function getData(url){
     }
     else{
         div.innerHTML = '';
-        div.innerHTML = `<h1 class="txt">No :(</h1>`
+        div.innerHTML = `<h1 class="txt">no ):</h1>`
     }
 } 
 (async () => {
