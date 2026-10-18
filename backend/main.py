@@ -1,5 +1,6 @@
 import requests
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import os
 
@@ -47,8 +48,16 @@ def sortData(array):
         result["ok"] = True
         return result
 
-a = (sortData(getData()))
 app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+    allow_credentials=True,
+)
 
 @app.get("/")
 def root():
