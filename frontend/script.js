@@ -9,6 +9,10 @@ async function getData(url){
         div.innerHTML = '';
         div.innerHTML = `<h1 class="txt">YES</h1>`
     }
+    else{
+        div.innerHTML = '';
+        div.innerHTML = `<h1 class="txt">No :(</h1>`
+    }
 } 
 (async () => {
     await getData(URL);
