@@ -48,8 +48,8 @@ def sortData(array):
         return result
 
 a = (sortData(getData()))
-print(sortData(getData()))
-if a["win"]:
-    print("CARBO WINS!!!")
-elif a["win"] != True:
-    print("CARBO LOSS!!!")
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return (sortData(getData()))
