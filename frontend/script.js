@@ -1,5 +1,15 @@
-const url = "https://did-carbo-win.vercel.app/";
+const URL = "https://did-carbo-win.vercel.app/";
+const div = document.getElementById("yn");
 
-response = fetch(url);
+async function getData(url){
+    response = await fetch(url);
+    const data = await response.json();
 
-console.log(response);
+    if (data.win){
+        div.innerHTML = '';
+        div.innerHTML = `<h1 class="txt">YES</h1>`
+    }
+} 
+(async () => {
+    await getData(URL);
+})();
