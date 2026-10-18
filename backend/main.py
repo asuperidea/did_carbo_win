@@ -9,7 +9,7 @@ TBA_API_KEY = os.getenv("TBA_API_KEY")
 TEAM_KEY = "frc7763"
 YEAR = 2026
 url = f"https://thebluealliance.com/api/v3/team/{TEAM_KEY}/matches/{YEAR}"
-headers = {"X-TBA-Auth-Key": "BHLil6pkSFw3sVxcAsl36eSl1wMHk5EPySAiVnnNNTGCnrOTbzZZU8jszoNxYSFT"}
+headers = {"X-TBA-Auth-Key": TBA_API_KEY}
 
 def getData():
     try:
